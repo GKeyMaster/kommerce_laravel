@@ -1,0 +1,92 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zen Kommerce Foundation</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation-flex.css" />
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="top-bar-left">
+        <ul class="menu">
+            <li class="menu-text">ZK Foundation</li>
+            <li>
+                <a href="https://github.com/inklabs/kommerce-core">
+                    Core
+                    <small>(kommerce-core)</small>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/inklabs/kommerce-templates">
+                    Templates
+                    <small>(kommerce-templates)</small>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/inklabs/kommerce-laravel">
+                    Laravel
+                    <small>(kommerce-laravel)</small>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<main id="app">
+    <div class="row">
+        <div class="column">
+            <div style="width:100%;padding:2% 25% 10%">
+                <img :src="main" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="row medium-up-3 large-up-4">
+        <div v-for="image in images" class="column">
+            <img v-on:click="setMain(image)" class="thumbnail" :src="image">
+        </div>
+    </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.js"></script>
+
+<script>
+    $(document).foundation();
+</script>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            main: '',
+            images: [
+                './screenshots/foundation/kt-foundation-cart.png',
+                './screenshots/foundation/kt-foundation-cart-item-added.png',
+                './screenshots/foundation/kt-foundation-cart-order-summary.png',
+                './screenshots/foundation/kt-foundation-home.png',
+                './screenshots/foundation/kt-foundation-product-detail.png',
+            ]
+        },
+        methods: {
+            setMain(imagePath) {
+                this.main = imagePath;
+            }
+        },
+        ready() {
+            this.main = this.images[0];
+        }
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+

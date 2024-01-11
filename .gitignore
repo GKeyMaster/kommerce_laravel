@@ -1,0 +1,10 @@
+/vendor
+/node_modules
+/public/storage
+/public/assets
+Homestead.yaml
+Homestead.json
+.env
+/_ide_helper.php
+/storage/scss_cache
+.DS_Store

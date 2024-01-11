@@ -1,0 +1,15 @@
+#zoom-image-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: none;
+    border: 3px solid #848484;
+}
+
+.screenshots .row:not(:first-child) {
+    margin-bottom: 50px;
+}
+
+img {
+    max-width: 100%;
+}

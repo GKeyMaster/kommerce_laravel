@@ -1,0 +1,14 @@
+{
+  "name": "kommerce-laravel",
+  "version": "0.0.6",
+  "description": "kommerce-laravel",
+  "keywords": [
+    "Kommerce",
+    "Laravel"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/inlkabs/kommerce-laravel.git"
+  },
+  "license": "MIT"
+}
